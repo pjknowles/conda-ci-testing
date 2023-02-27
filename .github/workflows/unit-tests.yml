@@ -32,4 +32,5 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
         run: |
+          conda activate test
           conda search sphinx-rtd-theme
