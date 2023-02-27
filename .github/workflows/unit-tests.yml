@@ -33,4 +33,6 @@ jobs:
       - name: Install dependencies
         run: |
           conda activate test
-          conda search sphinx-rtd-theme
+          conda search -vv sphinx-rtd-theme
+          wget https://conda.anaconda.org/conda-forge/noarch/repodata.json
+          grep sphinx-rtd-theme repodata.json
