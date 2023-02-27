@@ -33,6 +33,9 @@ jobs:
       - name: Install dependencies
         run: |
           conda activate test
+          echo before curl
+          curl -s https://conda.anaconda.org/conda-forge/noarch/repodata.json |grep sphinx-rtd-theme
+          echo after curl
           conda search -vv sphinx-rtd-theme
           wget https://conda.anaconda.org/conda-forge/noarch/repodata.json
           grep sphinx-rtd-theme repodata.json
