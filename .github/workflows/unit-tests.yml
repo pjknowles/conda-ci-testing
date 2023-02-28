@@ -40,6 +40,7 @@ jobs:
           echo after curl
           curl -s https://conda.anaconda.org/conda-forge/linux-64/repodata.json |grep pysjef
           echo after curl
+          rm /home/runner/conda_pkgs_dir/cache/*.q
           conda search -vv sphinx-rtd-theme
           wget https://conda.anaconda.org/conda-forge/noarch/repodata.json
           grep sphinx-rtd-theme repodata.json
